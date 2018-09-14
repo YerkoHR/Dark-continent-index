@@ -18,10 +18,11 @@ collections:
           widget: "hidden",
           default: "new-character",
         }
-      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Name", name: "title", widget: "string" }
       - { label: "Manga debut", name: "debut", widget: "number" }
       - { label: "Faction", name: "faction", widget: "string" }
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Img path", name: "img", widget: "hidden" }
+      - { label: "Template key", , name: "templateKey", widget: "hidden", default: "new-character"}
       - { label: "Tags", name: "tags", widget: "list" }
 
   - name: "pages"

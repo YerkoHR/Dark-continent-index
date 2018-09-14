@@ -21,10 +21,10 @@ export default class IndexPage extends React.Component {
                     {post.frontmatter.image && (
                       <img
                         src={`${post.frontmatter.image}`}
-                        alt={post.frontmatter.name}
+                        alt={post.frontmatter.title}
                       />
                     )}
-                    <div className="name">{post.frontmatter.name}</div>
+                    <div className="name">{post.frontmatter.title}</div>
                   </Link>
                 </div>
               ))}
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            name
+            title
             templateKey
             faction
             image

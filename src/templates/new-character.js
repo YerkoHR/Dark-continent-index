@@ -10,38 +10,33 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   tags,
-  name,
   title,
-  debut,
   faction,
+  debut,
   helmet
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <section>
       {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {name}
-            </h1>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+      <div>
+        <h1>
+          {title} {debut} {title} {faction}
+        </h1>
+        <PostContent content={content} />
+        {tags && tags.length ? (
+          <div>
+            <h4>Tags</h4>
+            <ul>
+              {tags.map(tag => (
+                <li key={tag + `tag`}>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ) : null}
       </div>
     </section>
   );
@@ -63,9 +58,8 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         faction={post.frontmatter.faction}
-        helmet={<Helmet title={`${post.frontmatter.name} | Character`} />}
+        helmet={<Helmet title={`${post.frontmatter.title} | Character`} />}
         tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
         debut={post.frontmatter.debut}
       />
     </Layout>
@@ -87,7 +81,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         faction
-        name
+        title
         tags
         debut
       }

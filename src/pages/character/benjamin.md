@@ -1,13 +1,13 @@
 ---
 templateKey: new-character
-name: Benjamin
+title: Benjamin
 faction: Kakin
 image: /img/benjamin.png
 debut: 2
-title: benjamin
 tags:
   - kakin
   - prince
 ---
 
+dsadasdad
 ![benjamin](/img/benjamin.png)

@@ -1,13 +1,13 @@
 ---
 templateKey: new-character
-name: Babimyna
+title: Babimyna
 faction: Kakin
 image: /img/babimyna.png
 debut: 3
-title: babimyna
 tags:
   - kakin
   - bodyguard
 ---
 
+dsadadad
 ![babimyna](/img/babimyna.png)
