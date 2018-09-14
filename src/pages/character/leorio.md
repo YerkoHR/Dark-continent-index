@@ -7,4 +7,4 @@ tags:
   - hunter
   - zodiac
 ---
-![](/img/leorio.png)
+![null](/img/leorio.png)
