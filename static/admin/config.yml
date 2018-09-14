@@ -12,18 +12,14 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {
-          label: "New character",
-          name: "newCharacter",
-          widget: "hidden",
-          default: "new-character",
-        }
+
       - { label: "Name", name: "title", widget: "string" }
       - { label: "Manga debut", name: "debut", widget: "number" }
       - { label: "Faction", name: "faction", widget: "string" }
       - { label: "Img path", name: "img", widget: "hidden" }
       - { label: "Template key", , name: "templateKey", widget: "hidden", default: "new-character"}
       - { label: "Tags", name: "tags", widget: "list" }
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "pages"
     label: "Pages"

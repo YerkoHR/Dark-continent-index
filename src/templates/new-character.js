@@ -60,6 +60,7 @@ const BlogPost = ({ data }) => {
         faction={post.frontmatter.faction}
         helmet={<Helmet title={`${post.frontmatter.title} | Character`} />}
         tags={post.frontmatter.tags}
+        name={post.frontmatter.title}
         debut={post.frontmatter.debut}
       />
     </Layout>
