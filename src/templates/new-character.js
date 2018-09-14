@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
       {helmet || ""}
       <div>
         <h1>
-          {title} {debut} {title} {faction}
+          {title} {debut} {faction}
         </h1>
         <PostContent content={content} />
         {tags && tags.length ? (
@@ -60,7 +60,7 @@ const BlogPost = ({ data }) => {
         faction={post.frontmatter.faction}
         helmet={<Helmet title={`${post.frontmatter.title} | Character`} />}
         tags={post.frontmatter.tags}
-        name={post.frontmatter.title}
+        title={post.frontmatter.title}
         debut={post.frontmatter.debut}
       />
     </Layout>

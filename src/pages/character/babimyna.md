@@ -9,5 +9,4 @@ tags:
   - bodyguard
 ---
 
-dsadadad
 ![babimyna](/img/babimyna.png)
