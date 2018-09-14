@@ -5,9 +5,10 @@ import { BlogPostTemplate } from "../../templates/new-character";
 const BlogPostPreview = ({ entry, widgetFor }) => (
   <BlogPostTemplate
     content={widgetFor("body")}
-    description={entry.getIn(["data", "description"])}
+    faction={entry.getIn(["data", "faction"])}
     tags={entry.getIn(["data", "tags"])}
     title={entry.getIn(["data", "title"])}
+    debut={entry.getIn(["data", "debut"])}
   />
 );
 

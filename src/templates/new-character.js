@@ -59,10 +59,11 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        faction={post.frontmatter.faction}
         helmet={<Helmet title={`${post.frontmatter.name} | Character`} />}
         tags={post.frontmatter.tags}
-        title={post.frontmatter.name}
+        title={post.frontmatter.title}
+        debut={post.frontmatter.debut}
       />
     </Layout>
   );
@@ -85,6 +86,7 @@ export const pageQuery = graphql`
         faction
         name
         tags
+        debut
       }
     }
   }
