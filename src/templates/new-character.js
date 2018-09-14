@@ -13,7 +13,7 @@ export const BlogPostTemplate = ({
   name,
   title,
   debut,
-  faction
+  faction,
   helmet
 }) => {
   const PostContent = contentComponent || Content;
