@@ -11,7 +11,7 @@ export const BlogPostTemplate = ({
   contentComponent,
   description,
   tags,
-  title,
+  name,
   helmet
 }) => {
   const PostContent = contentComponent || Content;
@@ -23,7 +23,7 @@ export const BlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
+              {name}
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
@@ -63,9 +63,9 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        helmet={<Helmet title={`${post.frontmatter.title} | Character`} />}
+        helmet={<Helmet title={`${post.frontmatter.name} | Character`} />}
         tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        title={post.frontmatter.name}
       />
     </Layout>
   );
@@ -85,8 +85,8 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
+        faction
+        name
         description
         tags
       }

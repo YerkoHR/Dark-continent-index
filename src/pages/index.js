@@ -23,10 +23,10 @@ export default class IndexPage extends React.Component {
               >
                 <p>
                   <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
+                    {post.frontmatter.name}
                   </Link>
                   <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
+                  <small>{post.frontmatter.faction}</small>
                 </p>
                 <p>
                   {post.excerpt}
@@ -56,7 +56,6 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "new-character" } } }
     ) {
       edges {
@@ -67,9 +66,9 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            title
+            name
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            faction
           }
         }
       }
