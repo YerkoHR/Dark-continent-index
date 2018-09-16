@@ -1,13 +1,21 @@
-$background: #ffff;
-$font: #fff;
-$primary: #000000;
-$secundary: #e4c041ce;
-
+$background: #edf0f4;
+$header: #0b2644;
+$primary: #8da7c4;
+$secundary: #134074;
+$box-shadow: 1px 0 0 0 #e8e8e8, 0 1px 0 0 #e8e8e8, 1px 1px 0 0 #e8e8e8,
+  1px 0 0 0 #e8e8e8 inset, 0 1px 0 0 #e8e8e8 inset;
 body {
   background: $background;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 5em;
+  min-height: 100%;
 }
 a {
   text-decoration: none;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
-import "../scss/cards.scss";
+import "../scss/index.scss";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,28 +10,23 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <Layout>
-        <section>
-          <div>
-            <h1>Dark continent characters</h1>
-            <div className="card__container">
-              {posts.map(({ node: post }) => (
-                <div key={post.id}>
-                  <Link className="card" to={post.fields.slug}>
-                    {post.frontmatter.image && (
-                      <img
-                        src={`${post.frontmatter.image}`}
-                        alt={post.frontmatter.title}
-                      />
-                    )}
-                    <div className="name">{post.frontmatter.title}</div>
-                  </Link>
-                </div>
-              ))}
+      <div>
+        <Layout>
+          {posts.map(({ node: post }) => (
+            <div key={post.id}>
+              <Link className="card" to={post.fields.slug}>
+                {post.frontmatter.image && (
+                  <img
+                    src={`${post.frontmatter.image}`}
+                    alt={post.frontmatter.title}
+                  />
+                )}
+                <div className="name">{post.frontmatter.title}</div>
+              </Link>
             </div>
-          </div>
-        </section>
-      </Layout>
+          ))}
+        </Layout>
+      </div>
     );
   }
 }

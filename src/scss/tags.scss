@@ -1,0 +1,8 @@
+.taglist li {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.tags__section {
+  display: block;
+}
