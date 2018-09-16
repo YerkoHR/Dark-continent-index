@@ -1,11 +1,12 @@
 ---
 title: Benjamin
-debut: 2
+debut: "2"
 faction: Kakin
+image: /img/benjamin.png
 templateKey: new-character
 tags:
   - kakin
   - prince
 ---
 
-![benjamin](/img/benjamin.png)
+![](/img/benjamin.png)

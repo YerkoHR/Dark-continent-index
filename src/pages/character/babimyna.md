@@ -3,10 +3,10 @@ templateKey: new-character
 title: Babimyna
 faction: Kakin
 image: /img/babimyna.png
-debut: 3
+debut: "3"
 tags:
   - kakin
   - bodyguard
 ---
 
-![babimyna](/img/babimyna.png)
+![](/img/babimyna.png)
