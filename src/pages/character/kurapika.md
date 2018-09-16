@@ -1,12 +1,15 @@
 ---
 templateKey: new-character
-title: kurapika
-faction: hunters
+title: Kurapika
+faction: Bodyguards
 image: /img/kurapika.png
-debut: "1"
+debut: "2"
+nen: Conjuration / Specialist
 tags:
   - hunter
   - bodyguard
 ---
 
 ![](/img/kurapika.png)
+
+Hunter assigned as bodyguard of Prince [Woble](/character//woble/) and Queen [Oito](/character//oito/).

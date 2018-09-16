@@ -1,8 +1,9 @@
 ---
-title: Oito
-debut: "5"
+title: Oito Hui Guo Rou
+debut: "359"
 image: /img/oito.png
 faction: Kakin
+nen: Unknown
 templateKey: new-character
 tags:
   - kakin
@@ -10,3 +11,5 @@ tags:
 ---
 
 ![](/img/oito.png)
+
+Eighth Queen of the Kakin Empire and eighth wife of King Nasubi. She gave him his youngest daughter, Prince [Woble](/character/woble/).
