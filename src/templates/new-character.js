@@ -4,19 +4,16 @@ import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
 
 export const BlogPostTemplate = ({
   content,
-  contentComponent,
   tags,
   title,
   faction,
   debut,
+  img,
   helmet
 }) => {
-  const PostContent = contentComponent || Content;
-
   return (
     <section>
       {helmet || ""}
@@ -24,7 +21,8 @@ export const BlogPostTemplate = ({
         <h1>
           {title} {debut} {faction}
         </h1>
-        <PostContent content={content} />
+        <img src={img} />
+        <div dangerouslySetInnerHTML={{ __html: content }} />
         {tags && tags.length ? (
           <div>
             <h4>Tags</h4>
@@ -44,7 +42,6 @@ export const BlogPostTemplate = ({
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
   title: PropTypes.string
 };
 
@@ -55,7 +52,6 @@ const BlogPost = ({ data }) => {
     <Layout>
       <BlogPostTemplate
         content={post.html}
-        contentComponent={HTMLContent}
         faction={post.frontmatter.faction}
         helmet={<Helmet title={`${post.frontmatter.title} | Character`} />}
         tags={post.frontmatter.tags}
