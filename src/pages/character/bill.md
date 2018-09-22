@@ -8,8 +8,7 @@ nen: Unknown
 tags:
   - bodyguard
   - hunter
+  - expedition team
 ---
-
-![](/img/bill.png)
 
 Hunter assigned as bodyguard of Prince [Woble](/character/woble/) and Queen [Oito](/character/oito/).

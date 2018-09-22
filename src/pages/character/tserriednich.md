@@ -10,6 +10,4 @@ tags:
   - prince
 ---
 
-![](/img/tserriednich.png)
-
 Fourth Prince of the Kakin Empire, the son of Queen Unma, and benefactor of the Heil-Ly Family.

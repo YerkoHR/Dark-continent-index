@@ -10,6 +10,4 @@ tags:
   - zodiac
 ---
 
-![](/img/leorio.png)
-
 Zodiac (boar) member of the medical team in the expedicion to the dark continent.

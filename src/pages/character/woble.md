@@ -10,6 +10,4 @@ tags:
   - prince
 ---
 
-![](/img/woble.png)
-
 Fourteenth Prince of the Kakin Empire, and the daughter of her father's eighth wife, Queen [Oito](/character/oito/).

@@ -9,6 +9,4 @@ tags:
   - expedition team
 ---
 
-![](/img/beyond.png)
-
 Leader of the Dark Continent expedition team and the son of Isaac Netero.

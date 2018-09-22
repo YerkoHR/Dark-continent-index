@@ -10,6 +10,4 @@ tags:
   - queen
 ---
 
-![](/img/oito.png)
-
 Eighth Queen of the Kakin Empire and eighth wife of King Nasubi. She gave him his youngest daughter, Prince [Woble](/character/woble/).

@@ -1,0 +1,38 @@
+@mixin linkUnderline {
+  a {
+    color: blue;
+    transition: 0.5s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+h2 {
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 400px;
+  justify-items: center;
+  align-items: center;
+  img {
+    width: 300px;
+    margin: 10px;
+    box-shadow: $box-shadow;
+  }
+}
+.sub-grid {
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: start;
+  margin-left: 10px;
+  align-items: center;
+  .section-2 {
+    text-align: start;
+    @include linkUnderline();
+  }
+  .section-3 {
+    @include linkUnderline();
+  }
+}

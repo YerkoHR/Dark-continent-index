@@ -11,30 +11,38 @@ export const BlogPostTemplate = ({
   title,
   faction,
   debut,
-  img,
-  helmet
+  nen,
+  img
 }) => {
   return (
     <section>
-      {helmet || ""}
-      <div>
-        <h1>
-          {title} {debut} {faction}
-        </h1>
-        <img src={img} />
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-        {tags && tags.length ? (
-          <div>
-            <h4>Tags</h4>
-            <ul>
-              {tags.map(tag => (
-                <li key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+      <Helmet title={`${title} | Character`} />
+      <h2>{title}</h2>
+      <div className="grid">
+        <img alt={`${title}`} src={img} />
+        <div className="sub-grid">
+          <ul className="section-1">
+            <li>Faction: {faction}</li>
+            <li>Nen type: {nen}</li>
+            <li>DC debut: {debut}</li>
+          </ul>
+          <div
+            className="section-2"
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+          {tags && tags.length ? (
+            <div className="section-3">
+              <span>Tags:</span>
+              <ul>
+                {tags.map(tag => (
+                  <li key={tag + `tag`}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
       </div>
     </section>
   );
@@ -49,14 +57,15 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout>
+    <Layout position={"left"}>
       <BlogPostTemplate
         content={post.html}
         faction={post.frontmatter.faction}
-        helmet={<Helmet title={`${post.frontmatter.title} | Character`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         debut={post.frontmatter.debut}
+        img={post.frontmatter.image}
+        nen={post.frontmatter.nen}
       />
     </Layout>
   );
@@ -78,6 +87,8 @@ export const pageQuery = graphql`
       frontmatter {
         faction
         title
+        nen
+        image
         tags
         debut
       }

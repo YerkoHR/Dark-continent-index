@@ -4,11 +4,11 @@ import "../scss/index.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, position }) => (
   <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="Home | Dark continent index" />
     <Navbar />
-    <div className="card__container">{children}</div>
+    <div className={`content__container ${position}`}>{children}</div>
     <Footer />
   </div>
 );

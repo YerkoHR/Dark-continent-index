@@ -11,7 +11,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <div>
-        <Layout>
+        <Layout position={"center"}>
           {posts.map(({ node: post }) => (
             <div key={post.id}>
               <Link className="card" to={post.fields.slug}>
