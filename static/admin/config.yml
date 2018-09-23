@@ -16,7 +16,7 @@ collections:
       - { label: "Name", name: "title", widget: "string" }
       - { label: "Manga debut", name: "debut", widget: "string" }
       - { label: "Faction", name: "faction", widget: "select", options: ['Kakin', 'Bodyguards', 'Zodiacs'] }
-      - { label: "Img path", name: "img", widget: "hidden" }
+      - { label: "Img path", name: "img", widget: "image" }
       - { label: "Template key", , name: "templateKey", widget: "hidden", default: "new-character"}
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown"}
