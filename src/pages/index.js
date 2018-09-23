@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import CardList from "../components/CardList";
+import Filters from "../components/Filters";
 import "../scss/index.scss";
 
 export default class IndexPage extends React.Component {
@@ -41,21 +42,7 @@ export default class IndexPage extends React.Component {
     return (
       <div>
         <Layout>
-          <h3>Filter</h3>
-          <ul>
-            <li>
-              <button onClick={() => this.onFilter("default")}>All</button>
-            </li>
-            <li>
-              <button onClick={() => this.onFilter("Kakin")}>Kakin</button>
-            </li>
-            <button onClick={() => this.onFilter("Zodiacs")}>Zodiacs</button>
-            <li />
-            <button onClick={() => this.onFilter("Bodyguards")}>
-              Bodyguard
-            </button>
-            <li />
-          </ul>
+          <Filters onFilter={this.onFilter} />
           {this.renderSwitch(this.state.filter)}
         </Layout>
       </div>
