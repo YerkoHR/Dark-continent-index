@@ -14,13 +14,16 @@
   color: $secundary;
 }
 .content__container {
-  display: flex;
   margin: 3em;
   padding: 1.5em 0;
   width: auto;
   background: lighten($background, 50%);
-  flex-flow: row wrap;
   box-shadow: $box-shadow;
+  .card__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
   a {
     text-decoration: none;
     color: black;
@@ -53,10 +56,4 @@
       text-align: center;
     }
   }
-}
-.center {
-  justify-content: center;
-}
-.left {
-  justify-content: flex-start;
 }

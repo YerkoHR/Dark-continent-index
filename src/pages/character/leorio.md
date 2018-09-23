@@ -2,7 +2,7 @@
 title: Leorio
 debut: "1"
 image: /img/leorio.png
-faction: Zodiac
+faction: Zodiacs
 nen: Emission
 templateKey: new-character
 tags:

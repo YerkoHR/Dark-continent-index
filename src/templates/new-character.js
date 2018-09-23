@@ -57,7 +57,7 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout position={"left"}>
+    <Layout>
       <BlogPostTemplate
         content={post.html}
         faction={post.frontmatter.faction}

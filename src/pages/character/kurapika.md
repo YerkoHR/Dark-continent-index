@@ -8,7 +8,6 @@ nen: Conjuration / Specialist
 tags:
   - hunter
   - bodyguard
-  - bodyguard
 ---
 
 Hunter assigned as bodyguard of Prince [Woble](/character/woble/) and Queen [Oito](/character/oito/).
