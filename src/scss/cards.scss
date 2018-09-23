@@ -9,10 +9,6 @@
     color: lighten($background, 5%);
   }
 }
-.card__p {
-  margin: 0 2em;
-  color: $secundary;
-}
 .content__container {
   margin: 3em;
   padding: 1.5em 0;
@@ -49,7 +45,7 @@
       height: 120px;
     }
     .name {
-      color: $secundary;
+      color: darken($primary, 20%);
       margin-top: 0.8em;
       display: flex;
       flex-flow: row wrap;

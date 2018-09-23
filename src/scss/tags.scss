@@ -1,6 +1,3 @@
-$tag: #002a66;
-$tag-back: #c7e4ff;
-
 @mixin tag-bubble($back, $col) {
   background: $back;
   border-radius: 10px;
@@ -17,8 +14,26 @@ $tag-back: #c7e4ff;
 .taglist {
   display: flex;
   flex-flow: row wrap;
-  li {
+  .bodyguard {
     @include tag-bubble($tag-back, $tag);
+  }
+  .hunter {
+    @include tag-bubble($blue, $tag);
+  }
+  .expedition {
+    @include tag-bubble($green, $tag);
+  }
+  .kakin {
+    @include tag-bubble($red, $tag);
+  }
+  .prince {
+    @include tag-bubble($purple, $tag);
+  }
+  .queen {
+    @include tag-bubble($grey, $tag);
+  }
+  .zodiac {
+    @include tag-bubble($yellow, $tag);
   }
 }
 .tags__container {

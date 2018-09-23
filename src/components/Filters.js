@@ -2,18 +2,21 @@ import React from "react";
 
 export default ({ onFilter }) => (
   <div>
-    <h3>Filter</h3>
-    <ul>
+    <ul className="filter__container">
       <li>
-        <button onClick={() => onFilter("default")}>All</button>
+        <button className="filter" onClick={() => onFilter("default")}>
+          All
+        </button>
       </li>
       <li>
         <button onClick={() => onFilter("Kakin")}>Kakin</button>
       </li>
-      <button onClick={() => onFilter("Zodiacs")}>Zodiacs</button>
-      <li />
-      <button onClick={() => onFilter("Bodyguards")}>Bodyguard</button>
-      <li />
+      <li>
+        <button onClick={() => onFilter("Zodiacs")}>Zodiacs</button>
+      </li>
+      <li>
+        <button onClick={() => onFilter("Bodyguards")}>Bodyguard</button>
+      </li>
     </ul>
   </div>
 );
