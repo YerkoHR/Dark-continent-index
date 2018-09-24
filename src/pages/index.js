@@ -17,14 +17,14 @@ export default class IndexPage extends React.Component {
 
   renderSwitch(filter) {
     const data = this.props.data;
-    const kakin = data.kakin.edges;
+    const princes = data.princes.edges;
     const bodyguards = data.bodyguards.edges;
     const zodiacs = data.zodiacs.edges;
     const def = data.default.edges;
 
     switch (filter) {
-      case "Kakin":
-        return <CardList data={kakin} />;
+      case "Princes":
+        return <CardList data={princes} />;
       case "Bodyguards":
         return <CardList data={bodyguards} />;
       case "Zodiacs":
@@ -66,8 +66,8 @@ export const fragment = graphql`
 `;
 export const query = graphql`
   query {
-    kakin: allMarkdownRemark(
-      filter: { frontmatter: { faction: { eq: "Kakin" } } }
+    princes: allMarkdownRemark(
+      filter: { frontmatter: { faction: { eq: "Princes" } } }
     ) {
       edges {
         node {

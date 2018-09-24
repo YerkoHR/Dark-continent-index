@@ -1,20 +1,7 @@
-.list__info {
-  margin: 0 2em;
-  padding: 2em 0;
-  display: flex;
-  justify-content: center;
-  p {
-    font-size: 13px;
-    line-height: 6px;
-    color: lighten($background, 5%);
-  }
-}
 .content__container {
-  margin: 3em;
-  padding: 1.5em 0;
+  margin: 2em;
+  padding: 1em 0;
   width: auto;
-  background: lighten($background, 50%);
-  box-shadow: $box-shadow;
   .card__container {
     display: flex;
     flex-flow: row wrap;
@@ -25,12 +12,8 @@
     color: black;
   }
   .card {
-    box-shadow: $box-shadow;
-    &:hover {
-      box-shadow: 2.2px 0 0 0 #e8e8e8, 0 2.2px 0 0 #e8e8e8,
-        2.2px 2.2px 0 0 #e8e8e8, 2.2px 0 0 0 #e8e8e8 inset,
-        0 2.2px 0 0 #e8e8e8 inset;
-    }
+    background: #fff;
+    border: 3px solid black;
     transition: 0.3s;
     cursor: pointer;
     display: flex;
@@ -44,12 +27,37 @@
       width: 120px;
       height: 120px;
     }
-    .name {
-      color: darken($primary, 20%);
-      margin-top: 0.8em;
+    .name__container {
       display: flex;
-      flex-flow: row wrap;
-      text-align: center;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      .name {
+        color: black;
+        margin-top: 0.8em;
+      }
+      .faction-color {
+        width: 18px;
+        height: 18px;
+        margin-top: 0.8em;
+        border-radius: 8px;
+        float: right;
+      }
+      .Princes {
+        background: $kakin;
+      }
+      .Bodyguards {
+        background: red;
+      }
+      .Dark {
+        background: green;
+      }
+      .Zodiacs {
+        background: yellow;
+      }
+      .Queen {
+        background: blue;
+      }
     }
   }
 }

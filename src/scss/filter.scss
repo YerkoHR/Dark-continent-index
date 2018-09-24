@@ -6,9 +6,13 @@
   li {
     margin-right: 0.2em;
     button {
-      background: lightgreen;
+      background: $kakin;
       border: 0;
       cursor: pointer;
+      transition: 0.6s ease-in;
+      &:hover {
+        background: lighten($kakin, 5%);
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
 title: Oito Hui Guo Rou
 debut: "359"
 image: /img/oito.png
-faction: Kakin
+faction: Queen
 nen: Unknown
 templateKey: new-character
 tags:

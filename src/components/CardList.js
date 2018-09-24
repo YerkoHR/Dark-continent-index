@@ -13,7 +13,14 @@ export default ({ data }) => (
                 alt={post.frontmatter.title}
               />
             )}
-            <div className="name">{post.frontmatter.title}</div>
+            <div className="name__container">
+              <div className="name">{post.frontmatter.title.split(" ")[0]}</div>
+              <span
+                className={`faction-color ${
+                  post.frontmatter.faction.split(" ")[0]
+                }`}
+              />
+            </div>
           </Link>
         </div>
       ))}

@@ -9,7 +9,7 @@ export default ({ onFilter }) => (
         </button>
       </li>
       <li>
-        <button onClick={() => onFilter("Kakin")}>Kakin</button>
+        <button onClick={() => onFilter("Princes")}>Princes</button>
       </li>
       <li>
         <button onClick={() => onFilter("Zodiacs")}>Zodiacs</button>

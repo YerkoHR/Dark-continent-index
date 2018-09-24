@@ -1,7 +1,7 @@
 ---
 templateKey: new-character
 title: Babimyna
-faction: Kakin
+faction: Bodyguards
 image: /img/babimyna.png
 debut: "363"
 nen: Unknown

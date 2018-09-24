@@ -2,7 +2,7 @@
 title: Woble Hui Guo Rou
 debut: "349"
 image: /img/woble.png
-faction: Kakin
+faction: Princes
 nen: Unknown
 templateKey: new-character
 tags:

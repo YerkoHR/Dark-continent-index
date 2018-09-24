@@ -6,14 +6,8 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-/**
- * 
- * 
- * <div
-            className="section-2"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
- */
+// the contentComponent || content lines ad relations are to fix a preview bug in the netlify cms
+
 export const BlogPostTemplate = ({
   content,
   tags,
@@ -30,7 +24,7 @@ export const BlogPostTemplate = ({
       <Helmet title={`${title} | Character`} />
       <h2>{title}</h2>
       <div className="grid">
-        <img alt={`${title}`} src={img} />
+        {img && <img alt={`${title}`} src={img} />}
         <div className="sub-grid">
           <ul className="section-1">
             <li>Faction: {faction}</li>

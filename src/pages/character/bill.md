@@ -8,7 +8,7 @@ nen: Unknown
 tags:
   - bodyguard
   - hunter
-  - expedition team
+  - dark continent expedition team
 ---
 
 Hunter assigned as bodyguard of Prince [Woble](/character/woble/) and Queen [Oito](/character/oito/).
