@@ -9,4 +9,4 @@ tags:
   - zodiac
   - hunter
 ---
-Triple-Star Disease Hunter, member of the Zodiacs with the codename "Dog" and the current Chairman ofthe  Hunter Association.
+Triple-Star Disease Hunter, member of the Zodiacs with the codename "Dog" and the current president of the hunter association.
