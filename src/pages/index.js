@@ -68,6 +68,7 @@ export const query = graphql`
   query {
     princes: allMarkdownRemark(
       filter: { frontmatter: { faction: { eq: "Princes" } } }
+      sort: { fields: [frontmatter___title] }
     ) {
       edges {
         node {
@@ -77,6 +78,7 @@ export const query = graphql`
     }
     zodiacs: allMarkdownRemark(
       filter: { frontmatter: { faction: { eq: "Zodiacs" } } }
+      sort: { fields: [frontmatter___title] }
     ) {
       edges {
         node {
@@ -86,6 +88,7 @@ export const query = graphql`
     }
     bodyguards: allMarkdownRemark(
       filter: { frontmatter: { faction: { eq: "Bodyguards" } } }
+      sort: { fields: [frontmatter___title] }
     ) {
       edges {
         node {
@@ -95,6 +98,7 @@ export const query = graphql`
     }
     default: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "new-character" } } }
+      sort: { fields: [frontmatter___title] }
     ) {
       edges {
         node {

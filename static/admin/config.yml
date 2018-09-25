@@ -16,6 +16,13 @@ collections:
       - { label: "Name", name: "title", widget: "string" }
       - { label: "Manga debut", name: "debut", widget: "string" }
       - { label: "Faction", name: "faction", widget: "select", options: ['Kakin', 'Bodyguards', 'Zodiacs'] }
+      - { 
+        label: "Nen type", 
+        name: "nen", 
+        widget: "select", 
+        options: 
+          ['Conjuration ', 'Emitter ', 'Enhancement ', 'Manipulation ', 'Transmutation ', 'Specialization', 'Unknown'] 
+        }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Template key", , name: "templateKey", widget: "hidden", default: "new-character"}
       - { label: "Tags", name: "tags", widget: "list" }
