@@ -9,13 +9,18 @@ export default ({ onFilter }) => (
         </button>
       </li>
       <li>
-        <button onClick={() => onFilter("Princes")}>Princes</button>
+        <button onClick={() => onFilter("Royal Family")}>Royal Family</button>
       </li>
       <li>
         <button onClick={() => onFilter("Zodiacs")}>Zodiacs</button>
       </li>
       <li>
-        <button onClick={() => onFilter("Bodyguards")}>Bodyguard</button>
+        <button onClick={() => onFilter("Bodyguards")}>Bodyguards</button>
+      </li>
+      <li>
+        <button onClick={() => onFilter("DC Expedition Team")}>
+          DC Expedition Team
+        </button>
       </li>
     </ul>
   </div>

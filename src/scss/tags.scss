@@ -14,13 +14,17 @@
 .taglist {
   display: flex;
   flex-flow: row wrap;
+  height: 100%;
+  li {
+    margin-top: 9px;
+  }
   .bodyguard {
     @include tag-bubble($tag-back, $tag);
   }
   .hunter {
     @include tag-bubble($blue, $tag);
   }
-  .expedition {
+  .dark {
     @include tag-bubble($green, $tag);
   }
   .kakin {

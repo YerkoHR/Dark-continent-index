@@ -17,18 +17,21 @@ export default class IndexPage extends React.Component {
 
   renderSwitch(filter) {
     const data = this.props.data;
-    const princes = data.princes.edges;
+    const royal = data.royal.edges;
     const bodyguards = data.bodyguards.edges;
     const zodiacs = data.zodiacs.edges;
     const def = data.default.edges;
+    const expedition = data.expedition.edges;
 
     switch (filter) {
-      case "Princes":
-        return <CardList data={princes} />;
+      case "Royal Family":
+        return <CardList data={royal} />;
       case "Bodyguards":
         return <CardList data={bodyguards} />;
       case "Zodiacs":
         return <CardList data={zodiacs} />;
+      case "DC Expedition Team":
+        return <CardList data={expedition} />;
       default:
         return <CardList data={def} />;
     }
@@ -66,8 +69,8 @@ export const fragment = graphql`
 `;
 export const query = graphql`
   query {
-    princes: allMarkdownRemark(
-      filter: { frontmatter: { faction: { eq: "Princes" } } }
+    royal: allMarkdownRemark(
+      filter: { frontmatter: { faction: { eq: "Royal Family" } } }
       sort: { fields: [frontmatter___title] }
     ) {
       edges {
@@ -88,6 +91,18 @@ export const query = graphql`
     }
     bodyguards: allMarkdownRemark(
       filter: { frontmatter: { faction: { eq: "Bodyguards" } } }
+      sort: { fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          ...indexFrag
+        }
+      }
+    }
+    expedition: allMarkdownRemark(
+      filter: {
+        frontmatter: { faction: { eq: "Dark Continent Expedition Team" } }
+      }
       sort: { fields: [frontmatter___title] }
     ) {
       edges {

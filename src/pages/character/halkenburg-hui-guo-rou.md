@@ -1,7 +1,7 @@
 ---
 title: Halkenburg Hui Guo Rou
 debut: "349"
-faction: Princes
+faction: Royal Family
 image: /img/halkenburg.png
 templateKey: new-character
 tags:

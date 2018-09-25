@@ -15,7 +15,7 @@ collections:
 
       - { label: "Name", name: "title", widget: "string" }
       - { label: "Manga debut", name: "debut", widget: "string" }
-      - { label: "Faction", name: "faction", widget: "select", options: ['Kakin', 'Bodyguards', 'Zodiacs'] }
+      - { label: "Faction", name: "faction", widget: "select", options: ['Royal Family', 'Bodyguards', 'Zodiacs', 'Dark Continent Expedition Team'] }
       - { 
         label: "Nen type", 
         name: "nen", 

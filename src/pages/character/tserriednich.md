@@ -2,8 +2,8 @@
 title: Tserriednich Hui Guo Rou
 debut: "345"
 image: /img/tserriednich.png
-faction: Princes
-nen: Specialist
+faction: Royal Family
+nen: Specialization
 templateKey: new-character
 tags:
   - kakin
