@@ -1,14 +1,14 @@
 ---
 title: Bill
-debut: "359"
-image: /img/bill.png
+debut: '359'
 faction: Bodyguards
-templateKey: new-character
 nen: Unknown
+image: /img/bill.png
+templateKey: new-character
 tags:
   - bodyguard
   - hunter
-  - dark continent expedition team
+  - expedition team
 ---
 
 Hunter assigned as bodyguard of Prince [Woble](/character/woble/) and Queen [Oito](/character/oito/).
