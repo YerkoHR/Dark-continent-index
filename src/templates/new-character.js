@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
@@ -24,12 +25,12 @@ export const BlogPostTemplate = ({
       <Helmet title={`${title} | Character`} />
       <h2>{title}</h2>
       <div className="grid">
-        {img && <img alt={`${title}`} src={img} />}
+        {img && <Img fluid={img.childImageSharp.fluid} />}
         <div className="sub-grid">
           <ul className="section-1">
-            <li>Faction: {faction}</li>
-            <li>Nen type: {nen}</li>
-            <li>DC debut: {debut}</li>
+            {faction && <li>Faction: {faction}</li>}
+            {nen && <li>Nen type: {nen}</li>}
+            {debut && <li>DC debut: {debut}</li>}
           </ul>
           <PostContent content={content} />
 
@@ -92,7 +93,13 @@ export const pageQuery = graphql`
         faction
         title
         nen
-        image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
         tags
         debut
       }

@@ -1,9 +1,9 @@
 ---
 title: Leorio Paradinight
-debut: '1'
+debut: "1"
 faction: Zodiacs
 nen: Emission
-image: /img/leorio.png
+image: "../../../static/img/leorio.png"
 templateKey: new-character
 tags:
   - hunter

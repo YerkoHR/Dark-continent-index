@@ -2,7 +2,7 @@
 title: Beyond Netero
 debut: "340"
 faction: Dark Continent Expedition Team
-image: /img/beyond.png
+image: "../../../static/img/beyond.png"
 nen: Unknown
 templateKey: new-character
 tags:

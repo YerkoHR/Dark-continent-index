@@ -1,12 +1,13 @@
 ---
 title: Camilla Hui Guo Rou
-debut: '349'
+debut: "349"
 faction: Royal Family
 nen: Unknown
-image: /img/camilla.png
+image: "../../../static/img/camilla.png"
 templateKey: new-character
 tags:
   - prince
   - kakin
 ---
+
 Second Prince of the Kakin Empire and the daughter Queen Duazul.

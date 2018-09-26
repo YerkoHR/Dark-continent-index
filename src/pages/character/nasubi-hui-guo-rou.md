@@ -3,7 +3,7 @@ title: Nasubi Hui Guo Rou
 debut: "340"
 faction: Royal Family
 nen: Unknown
-image: /img/nasubi.png
+image: "../../../static/img/nasubi.png"
 templateKey: new-character
 tags:
   - kakin

@@ -63,7 +63,13 @@ export const fragment = graphql`
       title
       templateKey
       faction
-      image
+      image {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
     }
   }
 `;

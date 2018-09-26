@@ -1,7 +1,7 @@
 ---
 title: Woble Hui Guo Rou
 debut: "349"
-image: /img/woble.png
+image: "../../../static/img/woble.png"
 faction: Royal Family
 nen: Unknown
 templateKey: new-character

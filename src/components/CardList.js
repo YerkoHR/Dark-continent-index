@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 
 export default ({ data }) => (
   <div>
@@ -7,12 +8,8 @@ export default ({ data }) => (
       {data.map(({ node: post }) => (
         <div key={post.id}>
           <Link className="card" to={post.fields.slug}>
-            {post.frontmatter.image && (
-              <img
-                src={`${post.frontmatter.image}`}
-                alt={post.frontmatter.title}
-              />
-            )}
+            <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+
             <div className="name__container">
               <div className="name">{post.frontmatter.title.split(" ")[0]}</div>
               <span

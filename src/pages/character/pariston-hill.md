@@ -3,7 +3,7 @@ title: Pariston Hill
 debut: "319"
 faction: Dark Continent Expedition Team
 nen: Unknown
-image: /img/pariston.png
+image: "../../../static/img/pariston.png"
 templateKey: new-character
 tags:
   - dark continent expedition team

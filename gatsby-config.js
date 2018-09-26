@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter"
+    title: "Dark continent index"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -23,7 +23,7 @@ module.exports = {
      {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `image`,
         path: `${__dirname}/static/img`,
       },
     },
