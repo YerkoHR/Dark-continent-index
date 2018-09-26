@@ -16,22 +16,25 @@ h2 {
   grid-template-rows: 400px;
   justify-items: center;
   align-items: center;
-  div {
-    width: 300px;
-    margin: 10px;
+  grid-gap: 5px;
+  .gatsby-image-wrapper {
+    border: 1px solid $grey;
+    width: 100%;
   }
 }
 .sub-grid {
   display: grid;
   grid-template-rows: auto;
+  grid-gap: 1em;
+  background: #fff;
   justify-items: start;
-  margin-left: 10px;
   align-items: center;
+  & > * {
+    padding-left: 10px;
+    width: 100%;
+  }
   .section-2 {
     text-align: start;
-    @include linkUnderline();
-  }
-  .section-3 {
     @include linkUnderline();
   }
 }

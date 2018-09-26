@@ -13,7 +13,7 @@
   }
   .card {
     background: #fff;
-    border: 3px solid black;
+    border: 2px solid $grey;
     transition: 0.3s;
     cursor: pointer;
     display: flex;
@@ -23,8 +23,13 @@
     margin: 0 0.5em 0.5em 0;
     width: 180px;
     height: 180px;
-    div {
+    &:hover {
+      border: 0px;
+      box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+    }
+    .gatsby-image-wrapper {
       width: 130px;
+      height: 130px;
     }
     .name__container {
       display: flex;

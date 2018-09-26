@@ -32,21 +32,20 @@ export const BlogPostTemplate = ({
             {nen && <li>Nen type: {nen}</li>}
             {debut && <li>DC debut: {debut}</li>}
           </ul>
-          <PostContent content={content} />
-
-          {tags && tags.length ? (
-            <div className="section-3">
-              <span>Tags:</span>
-              <ul>
-                {tags.map(tag => (
-                  <li key={tag + `tag`}>
-                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
+          <PostContent className="section-2" content={content} />
         </div>
+        {tags && tags.length ? (
+          <div className="section-3">
+            <span>Tags:</span>
+            <ul>
+              {tags.map(tag => (
+                <li key={tag + `tag`}>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </div>
     </section>
   );
