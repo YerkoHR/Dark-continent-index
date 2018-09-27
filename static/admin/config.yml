@@ -23,7 +23,7 @@ collections:
         options: 
           ['Conjuration ', 'Emitter ', 'Enhancement ', 'Manipulation ', 'Transmutation ', 'Specialization', 'Unknown'] 
         }
-      - { label: "Image", name: "image", widget: "image", default: "/img/default.png" }
+      - { label: "Image", name: "image", widget: "image" }
       - { label: "Template key", , name: "templateKey", widget: "hidden", default: "new-character"}
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown"}
