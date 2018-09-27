@@ -2,7 +2,7 @@
 templateKey: new-character
 title: Kurapika
 faction: Bodyguards
-image: "../../../static/img/kurapika.png"
+image: "/img/kurapika.png"
 debut: "2"
 nen: Conjuration / Specialist
 tags:

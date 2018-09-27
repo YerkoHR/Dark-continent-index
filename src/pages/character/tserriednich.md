@@ -1,7 +1,7 @@
 ---
 title: Tserriednich Hui Guo Rou
 debut: "345"
-image: "../../../static/img/tserriednich.png"
+image: "/img/tserriednich.png"
 faction: Royal Family
 nen: Specialization
 templateKey: new-character

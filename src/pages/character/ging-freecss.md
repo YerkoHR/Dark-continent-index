@@ -3,7 +3,7 @@ title: Ging Freecss
 debut: "66"
 faction: Dark Continent Expedition Team
 nen: Unknown
-image: "../../../static/img/ging.png"
+image: "/img/ging.png"
 templateKey: new-character
 tags:
   - dark continent expedition team

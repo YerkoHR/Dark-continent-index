@@ -1,7 +1,7 @@
 ---
 title: Oito Hui Guo Rou
 debut: "359"
-image: "../../../static/img/oito.png"
+image: "/img/oito.png"
 faction: Royal Family
 nen: Unknown
 templateKey: new-character

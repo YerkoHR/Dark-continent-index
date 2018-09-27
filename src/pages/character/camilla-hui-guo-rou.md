@@ -3,7 +3,7 @@ title: Camilla Hui Guo Rou
 debut: "349"
 faction: Royal Family
 nen: Unknown
-image: "../../../static/img/camilla.png"
+image: "/img/camilla.png"
 templateKey: new-character
 tags:
   - prince

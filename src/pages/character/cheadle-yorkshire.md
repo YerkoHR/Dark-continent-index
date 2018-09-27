@@ -3,7 +3,7 @@ title: Cheadle Yorkshire
 debut: "318"
 faction: Zodiacs
 nen: Unknown
-image: "../../../static/img/cheadle.png"
+image: "/img/cheadle.png"
 templateKey: new-character
 tags:
   - zodiac

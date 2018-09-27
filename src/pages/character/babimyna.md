@@ -2,7 +2,7 @@
 templateKey: new-character
 title: Babimyna
 faction: Bodyguards
-image: "./../../../static/img/babimyna.png"
+image: "/img/babimyna.png"
 debut: "363"
 nen: Unknown
 tags:

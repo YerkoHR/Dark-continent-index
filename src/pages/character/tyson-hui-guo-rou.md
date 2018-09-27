@@ -3,7 +3,7 @@ title: Tyson Hui Guo Rou
 debut: "349"
 faction: Royal Family
 nen: Unknown
-image: "../../../static/img/tyson.png"
+image: "/img/tyson.png"
 templateKey: new-character
 tags:
   - prince

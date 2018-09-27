@@ -2,7 +2,7 @@
 title: Benjamin Hui Guo Rou
 debut: "348"
 faction: Royal Family
-image: "../../../static/img/benjamin.png"
+image: "/img/benjamin.png"
 nen: Unknown
 templateKey: new-character
 tags:
