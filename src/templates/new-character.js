@@ -25,7 +25,7 @@ export const BlogPostTemplate = ({
       <Helmet title={`${title} | Character`} />
       <h2>{title}</h2>
       <div className="grid">
-        {img && <Img fluid={img.childImageSharp.fluid} />}
+        {img ? <Img fluid={img.childImageSharp.fluid} /> : null}
         <div className="sub-grid">
           <ul className="section-1">
             {faction && <li>Faction: {faction}</li>}
