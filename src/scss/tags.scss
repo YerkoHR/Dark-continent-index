@@ -1,13 +1,10 @@
-@mixin tag-bubble($back, $col) {
-  background: $back;
+@mixin tag-bubble($tag-background) {
+  background: $tag-background;
   border-radius: 10px;
   transition: 1s;
   padding: 5px 10px;
-  a {
-    color: $col;
-  }
   &:hover {
-    background: darken($back, 10%);
+    background: darken($tag-background, 10%);
   }
 }
 
@@ -19,25 +16,22 @@
     margin-top: 9px;
   }
   .bodyguard {
-    @include tag-bubble($tag-back, $tag);
+    @include tag-bubble($blue);
   }
   .hunter {
-    @include tag-bubble($blue, $tag);
+    @include tag-bubble($orange);
   }
   .dark {
-    @include tag-bubble($green, $tag);
+    @include tag-bubble($green);
   }
   .kakin {
-    @include tag-bubble($red, $tag);
+    @include tag-bubble($brown);
   }
   .prince {
-    @include tag-bubble($purple, $tag);
-  }
-  .queen {
-    @include tag-bubble($grey, $tag);
+    @include tag-bubble($purple);
   }
   .zodiac {
-    @include tag-bubble($yellow, $tag);
+    @include tag-bubble($red);
   }
 }
 .tags__container {
@@ -49,5 +43,5 @@
 .to-all-tags {
   margin: 1em 0;
 
-  @include tag-bubble(#d83a3a, #510a0a);
+  @include tag-bubble(darken($background, 20%));
 }

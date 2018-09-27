@@ -38,14 +38,14 @@ export default class IndexPage extends React.Component {
   }
 
   onFilter(filter) {
-    this.setState({ filter });
+    this.setState({ filter }, () => console.log(this.state.filter));
   }
 
   render() {
     return (
       <div>
         <Layout>
-          <Filters onFilter={this.onFilter} />
+          <Filters onFilter={this.onFilter} state={this.state.filter} />
           {this.renderSwitch(this.state.filter)}
         </Layout>
       </div>

@@ -1,3 +1,18 @@
+@mixin color-code {
+  .Royal {
+    background: $brown;
+  }
+  .Bodyguards {
+    background: $blue;
+  }
+  .Dark {
+    background: $green;
+  }
+  .Zodiacs {
+    background: $red;
+  }
+}
+
 .content__container {
   margin: 2em;
   padding: 1em 0;
@@ -47,21 +62,7 @@
         border-radius: 8px;
         float: right;
       }
-      .Royal {
-        background: $kakin;
-      }
-      .Bodyguards {
-        background: red;
-      }
-      .Dark {
-        background: green;
-      }
-      .Zodiacs {
-        background: yellow;
-      }
-      .Queen {
-        background: blue;
-      }
+      @include color-code();
     }
   }
 }

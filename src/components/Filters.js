@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ onFilter }) => (
+export default ({ onFilter, state }) => (
   <div>
     <ul className="filter__container">
       <li>
@@ -9,16 +9,34 @@ export default ({ onFilter }) => (
         </button>
       </li>
       <li>
-        <button onClick={() => onFilter("Royal Family")}>Royal Family</button>
+        <button
+          className={"Royal Family" === state ? "Royal" : ""}
+          onClick={() => onFilter("Royal Family")}
+        >
+          Royal Family
+        </button>
       </li>
       <li>
-        <button onClick={() => onFilter("Zodiacs")}>Zodiacs</button>
+        <button
+          className={"Zodiacs" === state ? "Zodiacs" : ""}
+          onClick={() => onFilter("Zodiacs")}
+        >
+          Zodiacs
+        </button>
       </li>
       <li>
-        <button onClick={() => onFilter("Bodyguards")}>Bodyguards</button>
+        <button
+          className={"Bodyguards" === state ? "Bodyguards" : ""}
+          onClick={() => onFilter("Bodyguards")}
+        >
+          Bodyguards
+        </button>
       </li>
       <li>
-        <button onClick={() => onFilter("DC Expedition Team")}>
+        <button
+          className={"DC Expedition Team" === state ? "Dark" : ""}
+          onClick={() => onFilter("DC Expedition Team")}
+        >
           DC Expedition Team
         </button>
       </li>
