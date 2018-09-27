@@ -75,19 +75,6 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  const { frontmatter } = node
-  if (frontmatter) {
-    const { image } = frontmatter
-    if (image) {
-      if (image.indexOf('/img') === 0) {
-        frontmatter.image = path.relative(
-          path.dirname(node.fileAbsolutePath),
-          path.join(__dirname, '/static/', image)
-        )
-      }
-    }
-  }
-
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
     createNodeField({
@@ -96,5 +83,4 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value
     });
   }
-
 };
