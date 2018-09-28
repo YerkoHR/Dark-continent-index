@@ -25,7 +25,7 @@ export const BlogPostTemplate = ({
       <Helmet title={`${title} | Character`} />
       <h2>{title}</h2>
       <div className="grid">
-        <Img fluid={img.childImageSharp.fluid} />
+        <Img fluid={img} />
         <div className="sub-grid">
           <ul className="section-1">
             {faction && <li>Faction: {faction}</li>}
@@ -68,7 +68,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         debut={post.frontmatter.debut}
-        img={post.frontmatter.image}
+        img={post.frontmatter.image.childImageSharp.fluid}
         nen={post.frontmatter.nen}
       />
     </Layout>
