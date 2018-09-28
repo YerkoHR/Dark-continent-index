@@ -7,7 +7,7 @@ public_folder: /img
 
 collections:
   - name: "character"
-    label: "Character"
+    label: "Characters"
     folder: "src/pages/character"
     create: true
     slug: "{{slug}}"
@@ -15,13 +15,15 @@ collections:
 
       - { label: "Name", name: "title", widget: "string" }
       - { label: "Manga debut", name: "debut", widget: "string" }
-      - { label: "Faction", name: "faction", widget: "select", options: ['Royal Family', 'Bodyguards', 'Zodiacs', 'Dark Continent Expedition Team'] }
+      - { label: "Faction", name: "faction", widget: "select", 
+      options: ['Royal Family', 'Bodyguards', 'Zodiacs', 'Dark Continent Expedition Team'] }
       - { 
         label: "Nen type", 
         name: "nen", 
         widget: "select", 
         options: 
-          ['Conjuration ', 'Emitter ', 'Enhancement ', 'Manipulation ', 'Transmutation ', 'Specialization', 'Unknown'] 
+          ['Conjuration ', 'Emitter ', 'Enhancement ', 
+          'Manipulation ', 'Transmutation ', 'Specialization', 'Unknown'] 
         }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Template key", , name: "templateKey", widget: "hidden", default: "new-character"}
