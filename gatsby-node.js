@@ -71,7 +71,7 @@ exports.createPages = ({ actions, graphql }) => {
   });
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+const createNodeFieldMarkdownRemark = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
@@ -82,4 +82,25 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value
     });
   }
+};
+
+const mapNetlifyMediaPath = ({ node }) => {
+  const { frontmatter } = node;
+  if (frontmatter) {
+    const { image } = frontmatter;
+
+    if (image) {
+      if (image.indexOf("/img") === 0) {
+        frontmatter.image = path.relative(
+          path.dirname(node.fileAbsolutePath),
+          path.join(__dirname, "/static/", image)
+        );
+      }
+    }
+  }
+};
+
+exports.onCreateNode = nodeContext => {
+  mapNetlifyMediaPath(nodeContext);
+  createNodeFieldMarkdownRemark(nodeContext);
 };

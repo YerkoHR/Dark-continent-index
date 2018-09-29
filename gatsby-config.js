@@ -3,12 +3,6 @@ module.exports = {
     title: "Dark continent index"
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-netlify-cms-paths`,
-      options: {
-        cmsConfig: `/static/admin/config.yml`
-      }
-    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
@@ -23,7 +17,16 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: []
+        plugins: [
+          "gatsby-remark-relative-images",
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 600,
+              backgroundColor: "transparent"
+            }
+          }
+        ]
       }
     },
     {
