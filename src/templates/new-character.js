@@ -17,7 +17,8 @@ export const BlogPostTemplate = ({
   faction,
   debut,
   nen,
-  img
+  img,
+  imgFluid
 }) => {
   const PostContent = contentComponent || Content;
   return (
@@ -25,7 +26,8 @@ export const BlogPostTemplate = ({
       <Helmet title={`${title} | Character`} />
       <h2>{title}</h2>
       <div className="grid">
-        <Img fluid={img} />
+        {imgFluid ? <Img fluid={imgFluid} /> : <img src={img} alt={img} />}
+
         <div className="sub-grid">
           <ul className="section-1">
             {faction && <li>Faction: {faction}</li>}
@@ -68,7 +70,8 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         debut={post.frontmatter.debut}
-        img={post.frontmatter.image.childImageSharp.fluid}
+        imgFluid={post.frontmatter.image.childImageSharp.fluid}
+        img={post.frontmatter.image.childImageSharp.fluid.src}
         nen={post.frontmatter.nen}
       />
     </Layout>
