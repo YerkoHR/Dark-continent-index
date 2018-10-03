@@ -87,7 +87,7 @@ const createNodeFieldMarkdownRemark = ({ node, actions, getNode }) => {
 const mapNetlifyMediaPath = ({ node }) => {
   const { frontmatter } = node;
   if (frontmatter) {
-    const { image } = frontmatter;
+    const { image, profileImage } = frontmatter;
 
     if (image) {
       if (image.indexOf("/img") === 0) {
@@ -97,9 +97,16 @@ const mapNetlifyMediaPath = ({ node }) => {
         );
       }
     }
+    if (profileImage) {
+      if (profileImage.indexOf("/img") === 0) {
+        frontmatter.profileImage = path.relative(
+          path.dirname(node.fileAbsolutePath),
+          path.join(__dirname, "/static/", profileImage)
+        );
+      }
+    }
   }
 };
-
 exports.onCreateNode = nodeContext => {
   mapNetlifyMediaPath(nodeContext);
   createNodeFieldMarkdownRemark(nodeContext);

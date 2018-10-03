@@ -4,6 +4,7 @@ debut: "349"
 faction: Royal Family
 nen: Unknown
 image: "/img/tyson.png"
+profileImage: "/img/tyson.png"
 templateKey: new-character
 tags:
   - prince

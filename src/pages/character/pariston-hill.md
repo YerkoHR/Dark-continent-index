@@ -4,6 +4,7 @@ debut: "319"
 faction: Dark Continent Expedition Team
 nen: Unknown
 image: "/img/pariston.png"
+profileImage: "/img/pariston.png"
 templateKey: new-character
 tags:
   - dark continent expedition team

@@ -4,6 +4,7 @@ debut: "66"
 faction: Dark Continent Expedition Team
 nen: Unknown
 image: "/img/ging.png"
+profileImage: "/img/ging.png"
 templateKey: new-character
 tags:
   - dark continent expedition team

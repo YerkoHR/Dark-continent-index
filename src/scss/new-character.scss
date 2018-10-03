@@ -1,40 +1,73 @@
-@mixin linkUnderline {
-  a {
-    color: blue;
-    transition: 0.5s;
-    &:hover {
-      text-decoration: underline;
-    }
+@mixin separator($width, $margin-left, $top) {
+  content: "";
+  height: 1px;
+  width: $width;
+  background: $profile-font;
+  margin-left: $margin-left;
+  display: block;
+  position: relative;
+  top: $top;
+}
+.character__name {
+  color: $profile-header;
+  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
+  &::after {
+    @include separator(300px, 20px, 0);
   }
 }
-h2 {
-  text-align: center;
+
+.profile {
+  margin: 2em 7em;
 }
 .grid {
+  box-shadow: 0 2px 4px 3px hsla(0, 0%, 0%, 0.2);
+  padding: 0 2em;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 400px;
   justify-items: center;
   align-items: center;
-  grid-gap: 5px;
+  grid-gap: 2em;
   .gatsby-image-wrapper {
-    border: 1px solid $grey;
-    width: 100%;
+    border: 1px solid $profile-header;
+    width: 380px;
+    max-height: 350px;
   }
 }
 .sub-grid {
   display: grid;
   grid-template-rows: auto;
   grid-gap: 1em;
-  background: #fff;
   justify-items: start;
   align-items: center;
+  padding: 0.5em 1em;
+  color: $profile-font;
   & > * {
-    padding-left: 10px;
     width: 100%;
+  }
+
+  .section-1::after {
+    @include separator(100%, 0, 20px);
   }
   .section-2 {
     text-align: start;
-    @include linkUnderline();
+    a {
+      color: $profile-header;
+      transition: 0.5s;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &::after {
+      @include separator(100%, 0, 20px);
+    }
+  }
+  .section-3 {
+    margin-top: 15px;
   }
 }

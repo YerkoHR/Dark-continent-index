@@ -4,6 +4,7 @@ debut: "359"
 faction: Bodyguards
 nen: Unknown
 image: "/img/bill.png"
+profileImage: "/img/bill.png"
 templateKey: new-character
 tags:
   - bodyguard

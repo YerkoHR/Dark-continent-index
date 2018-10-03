@@ -4,6 +4,7 @@ debut: "1"
 faction: Zodiacs
 nen: Emission
 image: "/img/leorio.png"
+profileImage: "/img/leorio.png"
 templateKey: new-character
 tags:
   - hunter

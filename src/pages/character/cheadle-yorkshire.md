@@ -4,6 +4,7 @@ debut: "318"
 faction: Zodiacs
 nen: Unknown
 image: "/img/cheadle.png"
+profileImage: "/img/cheadle.png"
 templateKey: new-character
 tags:
   - zodiac

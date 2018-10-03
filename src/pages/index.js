@@ -14,7 +14,6 @@ export default class IndexPage extends React.Component {
     this.renderSwitch = this.renderSwitch.bind(this);
     this.onFilter = this.onFilter.bind(this);
   }
-
   renderSwitch(filter) {
     const data = this.props.data;
     const royal = data.royal.edges;
@@ -43,12 +42,10 @@ export default class IndexPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <Layout>
-          <Filters onFilter={this.onFilter} state={this.state.filter} />
-          {this.renderSwitch(this.state.filter)}
-        </Layout>
-      </div>
+      <Layout>
+        <Filters onFilter={this.onFilter} state={this.state.filter} />
+        {this.renderSwitch(this.state.filter)}
+      </Layout>
     );
   }
 }

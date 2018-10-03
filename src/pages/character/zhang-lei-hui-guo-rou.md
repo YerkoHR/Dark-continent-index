@@ -4,6 +4,7 @@ debut: "349"
 faction: Royal Family
 nen: Unknown
 image: "/img/zhang-lei.png"
+profileImage: "/img/zhang-lei.png"
 templateKey: new-character
 tags:
   - prince

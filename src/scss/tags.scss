@@ -3,8 +3,9 @@
   border-radius: 10px;
   transition: 1s;
   padding: 5px 10px;
+  color: white;
   &:hover {
-    background: darken($tag-background, 10%);
+    background: lighten($tag-background, 13%);
   }
 }
 

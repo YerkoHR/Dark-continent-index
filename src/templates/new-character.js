@@ -22,33 +22,36 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
   return (
-    <section>
+    <div className="profile">
       <Helmet title={`${title} | Character`} />
-      <h2>{title}</h2>
       <div className="grid">
-        {imgFluid ? <Img fluid={imgFluid} /> : <img src={img} alt="" />}
         <div className="sub-grid">
           <ul className="section-1">
+            <h3 className="character__name">{title}</h3>
+
             {faction && <li>Faction: {faction}</li>}
             {nen && <li>Nen type: {nen}</li>}
             {debut && <li>DC debut: {debut}</li>}
           </ul>
           <PostContent className="section-2" content={content} />
+
+          {tags && tags.length ? (
+            <div className="section-3">
+              <ul className="taglist">
+                {tags.map(tag => (
+                  <li key={tag + `tag`}>
+                    <Link className={`${tag}`} to={`/tags/${kebabCase(tag)}/`}>
+                      {tag}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
         </div>
-        {tags && tags.length ? (
-          <div className="section-3">
-            <span>Tags:</span>
-            <ul>
-              {tags.map(tag => (
-                <li key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+        {imgFluid ? <Img fluid={imgFluid} /> : <img src={img} alt="" />}
       </div>
-    </section>
+    </div>
   );
 };
 
@@ -58,20 +61,19 @@ BlogPostTemplate.propTypes = {
 };
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
-
+  const { frontmatter: post } = data.markdownRemark;
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
+        content={data.markdownRemark.html}
         contentComponent={HTMLContent}
-        faction={post.frontmatter.faction}
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        debut={post.frontmatter.debut}
-        imgFluid={post.frontmatter.image.childImageSharp.fluid}
-        img={post.frontmatter.image.childImageSharp.fluid.src}
-        nen={post.frontmatter.nen}
+        faction={post.faction}
+        tags={post.tags}
+        title={post.title}
+        debut={post.debut}
+        imgFluid={post.profileImage.childImageSharp.fluid}
+        img={post.profileImage.childImageSharp.fluid.src}
+        nen={post.nen}
       />
     </Layout>
   );
@@ -94,9 +96,9 @@ export const pageQuery = graphql`
         faction
         title
         nen
-        image {
+        profileImage {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(maxWidth: 250) {
               ...GatsbyImageSharpFluid
             }
           }

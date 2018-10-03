@@ -4,6 +4,7 @@ debut: "349"
 faction: Royal Family
 nen: Unknown
 image: "/img/camilla.png"
+profileImage: "/img/camilla-profile.png"
 templateKey: new-character
 tags:
   - prince
