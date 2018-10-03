@@ -1,73 +1,104 @@
-@mixin separator($width, $margin-left, $top) {
-  content: "";
-  height: 1px;
-  width: $width;
-  background: $profile-font;
-  margin-left: $margin-left;
-  display: block;
-  position: relative;
-  top: $top;
-}
-.character__name {
-  color: $profile-header;
-  position: relative;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
+$screen-xs: 375px;
+$screen-tablet: 764px;
+$screen-laptop: 1024px;
 
-  &::after {
-    @include separator(300px, 20px, 0);
+@mixin size($screen) {
+  @media (max-width: #{$screen}) {
+    @content;
   }
 }
-
-.profile {
-  margin: 2em 7em;
+@mixin separator {
+  content: "";
+  height: 1px;
+  background: $profile-font;
+  display: block;
+  position: relative;
+  @content;
 }
 .grid {
   box-shadow: 0 2px 4px 3px hsla(0, 0%, 0%, 0.2);
-  padding: 0 2em;
+  padding: 1em 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 400px;
-  justify-items: center;
-  align-items: center;
-  grid-gap: 2em;
-  .gatsby-image-wrapper {
-    border: 1px solid $profile-header;
-    width: 380px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 3em;
+  .gatsby-image-wrapper,
+  img {
+    border: 1px solid $profile-font;
+    width: 320px;
     max-height: 350px;
+    margin: 0 auto;
+  }
+  @include size($screen-xs) {
+    .gatsby-image-wrapper,
+    img {
+      width: 280px;
+      margin: 0 auto;
+    }
   }
 }
 .sub-grid {
-  display: grid;
-  grid-template-rows: auto;
-  grid-gap: 1em;
-  justify-items: start;
-  align-items: center;
-  padding: 0.5em 1em;
   color: $profile-font;
-  & > * {
-    width: 100%;
+  margin-left: 1em;
+  .character__name {
+    color: $profile-header;
+    &::after {
+      @include separator() {
+        width: 80%;
+        margin: 0.6em 0;
+      }
+    }
+    @include size($screen-tablet) {
+      &::after {
+        width: 95%;
+      }
+    }
+    @include size($screen-laptop) {
+      &::after {
+        width: 98%;
+      }
+    }
   }
-
   .section-1::after {
-    @include separator(100%, 0, 20px);
+    @include separator() {
+      width: 80%;
+      margin: 0.6em 0;
+    }
+  }
+  @include size($screen-tablet) {
+    .section-1::after {
+      width: 95%;
+    }
+  }
+  @include size($screen-laptop) {
+    .section-1::after {
+      width: 98%;
+    }
+  }
+  .section-2::after {
+    @include separator() {
+      width: 80%;
+      margin: 0.6em 0;
+    }
+  }
+  @include size($screen-tablet) {
+    .section-2::after {
+      width: 95%;
+    }
+  }
+  @include size($screen-laptop) {
+    .section-2::after {
+      width: 98%;
+    }
   }
   .section-2 {
-    text-align: start;
     a {
       color: $profile-header;
-      transition: 0.5s;
       &:hover {
         text-decoration: underline;
       }
     }
-
-    &::after {
-      @include separator(100%, 0, 20px);
-    }
   }
   .section-3 {
-    margin-top: 15px;
+    margin-bottom: 1.5em;
   }
 }

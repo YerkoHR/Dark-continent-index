@@ -36,7 +36,18 @@ collections:
       - { label: "Profile image", name: "profileImage", widget: "image" }
       - { label: "Template key", , name: "templateKey", 
           widget: "hidden", default: "new-character"}
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list", field: 
+        - { label: tag, name: tag, widget: "select", 
+            options: [
+              'kakin',
+              'bodyguard',
+              'hunter',
+              'zodiac',
+              'prince',
+              'dark continent expedition team'
+            ]
+          }
+        }
       - { label: "Body", name: "body", widget: "markdown"}
 
   - name: "pages"
