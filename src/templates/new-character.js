@@ -36,15 +36,17 @@ export const BlogPostTemplate = ({
           <PostContent className="section-2" content={content} />
 
           <div className="section-3">
-            <ul className="taglist">
-              {tags.map(tag => (
-                <li key={tag + `tag`}>
-                  <Link className={`${tag}`} to={`/tags/${kebabCase(tag)}/`}>
-                    {tag}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {tags && (
+              <ul className="taglist">
+                {tags.map(tag => (
+                  <li key={tag + `tag`}>
+                    <Link className={`${tag}`} to={`/tags/${kebabCase(tag)}/`}>
+                      {tag}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
         {imgFluid ? <Img fluid={imgFluid} /> : <img src={img} alt="" />}
