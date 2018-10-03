@@ -13,16 +13,16 @@ collections:
     slug: "{{slug}}"
     fields:
 
-      - { label: "Name", name: "title", widget: "string" }
-      - { label: "Manga debut", name: "debut", widget: "string" }
-      - { label: "Faction", name: "faction", widget: "select", 
+      - { label: "Name", name: "title", widget: "string", default: "Character"}
+      - { label: "Manga debut", name: "debut", widget: "string", default: "999"}
+      - { label: "Faction", name: "faction", widget: "select", default: "HXH",
           options: 
           ['Royal Family', 
           'Bodyguards', 
           'Zodiacs', 
           'Dark Continent Expedition Team']
         }
-      - { label: "Nen type", name: "nen", widget: "select", 
+      - { label: "Nen type", name: "nen", widget: "select", default: "Unknown",
           options: 
           ['Conjuration ', 
           'Emitter ', 
@@ -36,7 +36,7 @@ collections:
       - { label: "Profile image", name: "profileImage", widget: "image" }
       - { label: "Template key", , name: "templateKey", 
           widget: "hidden", default: "new-character"}
-      - { label: "Tags", name: "tags", widget: "list", field: 
+      - { label: "Tags", name: "tags", widget: "list", default: "tag", field: 
          { label: "tag", name: "tag", widget: "select", 
             options: [
               'kakin',
@@ -48,7 +48,7 @@ collections:
             ]
           }
       }
-      - { label: "Body", name: "body", widget: "markdown"}
+      - { label: "Body", name: "body", widget: "markdown", default: "lorem ipsum..."}
 
   - name: "pages"
     label: "Pages"

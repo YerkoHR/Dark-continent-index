@@ -22,32 +22,30 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
   return (
-    <div className="profile">
+    <div>
       <Helmet title={`${title} | Character`} />
       <div className="grid">
         <div className="sub-grid">
           <ul className="section-1">
             <h3 className="character__name">{title}</h3>
 
-            {faction && <li>Faction: {faction}</li>}
-            {nen && <li>Nen type: {nen}</li>}
-            {debut && <li>DC debut: {debut}</li>}
+            <li>Faction: {faction}</li>
+            <li>Nen type: {nen}</li>
+            <li>DC debut: {debut}</li>
           </ul>
           <PostContent className="section-2" content={content} />
 
-          {tags && tags.length ? (
-            <div className="section-3">
-              <ul className="taglist">
-                {tags.map(tag => (
-                  <li key={tag + `tag`}>
-                    <Link className={`${tag}`} to={`/tags/${kebabCase(tag)}/`}>
-                      {tag}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
+          <div className="section-3">
+            <ul className="taglist">
+              {tags.map(tag => (
+                <li key={tag + `tag`}>
+                  <Link className={`${tag}`} to={`/tags/${kebabCase(tag)}/`}>
+                    {tag}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         {imgFluid ? <Img fluid={imgFluid} /> : <img src={img} alt="" />}
       </div>
