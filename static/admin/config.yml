@@ -47,7 +47,7 @@ collections:
               'dark continent expedition team'
             ]
           }
-        
+      }
       - { label: "Body", name: "body", widget: "markdown"}
 
   - name: "pages"
