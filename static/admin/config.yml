@@ -21,7 +21,8 @@ collections:
           'Bodyguards', 
           'Zodiacs', 
           'Dark Continent Expedition Team',
-          'Phantom Troupe']
+          'Phantom Troupe',
+          'Spider killer']
         }
       - { label: "Nen type", name: "nen", widget: "select",
           options: 
