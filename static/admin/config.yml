@@ -37,7 +37,7 @@ collections:
       - { label: "Template key", , name: "templateKey", 
           widget: "hidden", default: "new-character"}
       - { label: "Tags", name: "tags", widget: "list", field: 
-        - { label: "tag", name: "tag", widget: "select", 
+         { label: "tag", name: "tag", widget: "select", 
             options: [
               'kakin',
               'bodyguard',
