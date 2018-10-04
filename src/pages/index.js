@@ -62,7 +62,7 @@ export const fragment = graphql`
       faction
       image {
         childImageSharp {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }

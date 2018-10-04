@@ -98,7 +98,7 @@ export const pageQuery = graphql`
         nen
         profileImage {
           childImageSharp {
-            fluid(maxWidth: 250) {
+            fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid
             }
           }
