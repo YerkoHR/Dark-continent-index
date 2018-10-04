@@ -1,7 +1,7 @@
 ---
 title: Hisoka Morow
 debut: '5'
-faction: Dark Continent Expedition Team
+faction: Spider killer
 nen: 'Transmutation '
 image: /img/hisoka.png
 profileImage: /img/hisoka-profile.png
