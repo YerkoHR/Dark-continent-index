@@ -1,3 +1,9 @@
+.home-mobile {
+  display: none;
+  @include size($screen-tablet, max-width) {
+    display: block;
+  }
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -6,6 +12,9 @@
   padding: 1.5em 0;
   font-size: 1em;
   margin: 1em 0;
+  @include size($screen-tablet, max-width) {
+    display: none;
+  }
   a {
     color: black;
     border-bottom: 2px solid transparent;

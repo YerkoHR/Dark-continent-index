@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import "../scss/index.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import MobileNav from "../components/MobileNav";
 
 export default class Layout extends React.Component {
   constructor() {
@@ -16,7 +17,7 @@ export default class Layout extends React.Component {
     this.setState({ animate: true });
   }
   render() {
-    const { children } = this.props;
+    const { children, state, onFilter, onToggle } = this.props;
     return (
       <div>
         <Helmet title="Home | Dark continent index" />
@@ -30,6 +31,7 @@ export default class Layout extends React.Component {
         >
           {children}
         </div>
+        <MobileNav state={state} onFilter={onFilter} onToggle={onToggle} />
         <Footer />
       </div>
     );

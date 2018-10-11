@@ -4,6 +4,7 @@ debut: "349"
 faction: Royal Family
 nen: Unknown
 image: "/img/tubeppa.png"
+imgBeast: "/img/tubeppa-beast.png"
 profileImage: "/img/tubeppa.png"
 templateKey: new-character
 tags:

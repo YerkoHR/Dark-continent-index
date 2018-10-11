@@ -6,8 +6,7 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-
-// the contentComponent || content lines ad relations are to fix a preview bug in the netlify cms
+import NenBeast from "../components/NenBeast";
 
 export const BlogPostTemplate = ({
   content,
@@ -18,7 +17,8 @@ export const BlogPostTemplate = ({
   debut,
   nen,
   img,
-  imgFluid
+  imgFluid,
+  imgBeast
 }) => {
   const PostContent = contentComponent || Content;
   return (
@@ -51,6 +51,7 @@ export const BlogPostTemplate = ({
         </div>
         {imgFluid ? <Img fluid={imgFluid} /> : <img src={img} alt="" />}
       </div>
+      {tags.indexOf("prince") !== -1 && <NenBeast imgBeast={imgBeast} />}
     </div>
   );
 };
@@ -65,7 +66,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <BlogPostTemplate
-        content={data.markdownRemark.html}
+        content={post.html}
         contentComponent={HTMLContent}
         faction={post.faction}
         tags={post.tags}
@@ -74,6 +75,7 @@ const BlogPost = ({ data }) => {
         imgFluid={post.profileImage.childImageSharp.fluid}
         img={post.profileImage.childImageSharp.fluid.src}
         nen={post.nen}
+        imgBeast={post.imgBeast ? post.imgBeast.childImageSharp.fluid : ""}
       />
     </Layout>
   );
@@ -97,6 +99,13 @@ export const pageQuery = graphql`
         title
         nen
         profileImage {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        imgBeast {
           childImageSharp {
             fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid

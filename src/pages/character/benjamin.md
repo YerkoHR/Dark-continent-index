@@ -4,6 +4,7 @@ debut: "348"
 faction: Royal Family
 image: "/img/benjamin.png"
 profileImage: "/img/benjamin.png"
+imgBeast: "/img/benjamin-beast.png"
 nen: Unknown
 templateKey: new-character
 tags:

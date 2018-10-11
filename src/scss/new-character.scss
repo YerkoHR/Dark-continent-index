@@ -1,22 +1,5 @@
-$screen-xs: 375px;
-$screen-tablet: 764px;
-$screen-laptop: 1024px;
-
-@mixin size($screen, $maxmin) {
-  @media ($maxmin: #{$screen}) {
-    @content;
-  }
-}
-@mixin separator {
-  content: "";
-  height: 1px;
-  background: $profile-font;
-  display: block;
-  position: relative;
-  @content;
-}
 .grid {
-  box-shadow: 0 2px 4px 3px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0 1px 2px 2px hsla(0, 0%, 0%, 0.2);
   padding: 1em 0;
   margin-top: 3em;
   @include size($screen-laptop, min-width) {
@@ -25,7 +8,7 @@ $screen-laptop: 1024px;
   }
   .gatsby-image-wrapper,
   img {
-    border: 1px solid $profile-font;
+    border: 0.5px solid $profile-font;
     width: 320px;
     max-height: 350px;
     margin: 0 auto;
@@ -33,14 +16,13 @@ $screen-laptop: 1024px;
   @include size($screen-xs, max-width) {
     .gatsby-image-wrapper,
     img {
-      width: 280px;
-      margin: 0 auto;
+      width: 240px;
     }
   }
 }
 .sub-grid {
   color: $profile-font;
-  margin-left: 1em;
+  margin: 0 1em;
   .character__name {
     color: $profile-header;
     &::after {
@@ -51,12 +33,6 @@ $screen-laptop: 1024px;
     }
   }
   .section-1::after {
-    @include separator() {
-      width: 95%;
-      margin: 0.6em 0;
-    }
-  }
-  .section-2::after {
     @include separator() {
       width: 95%;
       margin: 0.6em 0;

@@ -4,6 +4,7 @@ debut: "349"
 faction: Royal Family
 nen: Unknown
 image: /img/luzurus.png
+imgBeast: "/img/luzurus-beast.png"
 profileImage: /img/luzurus.png
 templateKey: new-character
 tags:

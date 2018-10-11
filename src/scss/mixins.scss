@@ -1,0 +1,19 @@
+$screen-xs: 375px;
+$screen-s: 425px;
+$filter: 480px;
+$screen-tablet: 764px;
+$screen-laptop: 1024px;
+
+@mixin size($screen, $maxmin) {
+  @media ($maxmin: #{$screen}) {
+    @content;
+  }
+}
+@mixin separator {
+  content: "";
+  height: 1px;
+  background: $profile-font;
+  display: block;
+  position: relative;
+  @content;
+}

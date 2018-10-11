@@ -1,0 +1,15 @@
+.mobile-nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-top: 1px solid #ede7f3;
+  background: #fbfafc;
+  height: 3.5rem;
+  @include size($screen-tablet, min-width) {
+    display: none;
+  }
+}

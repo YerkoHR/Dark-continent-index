@@ -4,6 +4,7 @@ debut: "349"
 faction: Royal Family
 nen: Unknown
 image: /img/kacho.png
+imgBeast: "/img/kacho-beast.png"
 profileImage: /img/kacho.png
 templateKey: new-character
 tags:

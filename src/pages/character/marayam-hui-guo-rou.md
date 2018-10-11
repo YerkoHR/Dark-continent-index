@@ -4,6 +4,7 @@ debut: "349"
 faction: Royal Family
 nen: Unknown
 image: /img/marayam.png
+imgBeast: "/img/marayam-beast.png"
 profileImage: /img/marayam.png
 templateKey: new-character
 tags:

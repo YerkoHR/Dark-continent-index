@@ -4,7 +4,8 @@ debut: "349"
 faction: Royal Family
 nen: Unknown
 image: /img/momoze.png
-profileImage: /img/momoze.png
+imgBeast: "/img/momoze-beast.png"
+profileImage: /img/momoze-profile.png
 templateKey: new-character
 tags:
   - prince

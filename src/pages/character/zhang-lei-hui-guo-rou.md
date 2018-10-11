@@ -1,9 +1,10 @@
 ---
-title: Zhang-Lei Hui Guo Rou
+title: Zhang Lei Hui Guo Rou
 debut: "349"
 faction: Royal Family
 nen: Unknown
 image: "/img/zhang-lei.png"
+imgBeast: "/img/zhang-beast.png"
 profileImage: "/img/zhang-lei.png"
 templateKey: new-character
 tags:

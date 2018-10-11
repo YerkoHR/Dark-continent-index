@@ -4,6 +4,7 @@ debut: "349"
 faction: Royal Family
 nen: Unknown
 image: /img/fugetsu.png
+imgBeast: "/img/fugetsu-beast.png"
 profileImage: /img/fugetsu.png
 templateKey: new-character
 tags:
