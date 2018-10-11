@@ -1,11 +1,11 @@
 ---
-templateKey: new-character
 title: Kurapika
+debut: '343'
 faction: Bodyguards
-image: "/img/kurapika.png"
-profileImage: "/img/kurapika.png"
-debut: "2"
 nen: Conjuration / Specialist
+image: /img/kurapika.png
+profileImage: /img/kurapika.png
+templateKey: new-character
 tags:
   - hunter
   - bodyguard
