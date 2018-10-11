@@ -12,9 +12,6 @@
   height: 3.5rem;
   a {
     color: white;
-    &:hover {
-      opacity: 0.6;
-    }
   }
   @include size($screen-tablet, min-width) {
     display: none;
