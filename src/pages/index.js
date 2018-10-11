@@ -9,7 +9,7 @@ export default class IndexPage extends React.Component {
   constructor() {
     super();
     this.state = {
-      filter: "",
+      filter: "all",
       toggle: false
     };
     this.renderSwitch = this.renderSwitch.bind(this);

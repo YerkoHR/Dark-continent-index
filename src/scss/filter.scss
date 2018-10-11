@@ -1,9 +1,20 @@
 .filter__container {
   display: flex;
   flex-direction: row;
+
+  @include size($filter, max-width) {
+    flex-direction: column;
+    display: flex;
+    margin: 1em auto;
+    width: 60%;
+  }
   li {
+    width: 100%;
     margin-right: 0.2em;
+
     button {
+      width: 100%;
+
       cursor: pointer;
       color: white;
       transition: 0.3s;

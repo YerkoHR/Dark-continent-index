@@ -3,8 +3,10 @@ import { Link } from "gatsby";
 
 const Navbar = () => (
   <nav>
-    <div className="home-mobile">
-      <Link to="/">Dark Continent Index</Link>
+    <div>
+      <div className="home-mobile">
+        <Link to="/">Dark Continent Index</Link>
+      </div>
       <div className="header">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>

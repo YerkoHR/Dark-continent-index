@@ -1,20 +1,21 @@
 import React from "react";
+import { Link } from "gatsby";
 
 export default () => {
   return (
     <div className="mobile-nav">
-      <a href="/">
+      <Link to="/">
         <span />
         <div>Home</div>
-      </a>
-      <a href="/about">
+      </Link>
+      <Link to="/about">
         <span />
         <div>About</div>
-      </a>
-      <a href="/tags">
+      </Link>
+      <Link to="/tags">
         <span />
         <div>Tags</div>
-      </a>
+      </Link>
       <a
         rel="noopener noreferrer"
         href="https://github.com/YerkoHR/gatsby-starter-netlify-cms"
