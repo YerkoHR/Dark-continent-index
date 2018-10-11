@@ -2,13 +2,17 @@
   position: fixed;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1;
   border-top: 1px solid #ede7f3;
-  background: #fbfafc;
+  background: $secundary;
   height: 3.5rem;
+  a {
+    color: white;
+  }
   @include size($screen-tablet, min-width) {
     display: none;
   }

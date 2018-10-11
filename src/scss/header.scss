@@ -3,7 +3,8 @@
   text-align: center;
   padding: 2em;
   a {
-    color: $header;
+    color: $secundary;
+    font-size: 1.3em;
   }
   @include size($screen-tablet, min-width) {
     display: none;
@@ -21,7 +22,7 @@
     align-items: center;
   }
   a {
-    color: $header;
+    color: $secundary;
     border-bottom: 2px solid transparent;
     transition: 0.4s;
     &:hover {
