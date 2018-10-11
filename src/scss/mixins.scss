@@ -12,8 +12,22 @@ $screen-laptop: 1024px;
 @mixin separator {
   content: "";
   height: 1px;
-  background: $profile-font;
+  background: $tertiary;
   display: block;
   position: relative;
   @content;
+}
+@mixin color-code {
+  .Royal {
+    background: $brown;
+  }
+  .Bodyguards {
+    background: $blue;
+  }
+  .Dark {
+    background: $green;
+  }
+  .Zodiacs {
+    background: $red;
+  }
 }

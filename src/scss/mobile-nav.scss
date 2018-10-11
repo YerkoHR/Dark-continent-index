@@ -7,11 +7,14 @@
   left: 0;
   right: 0;
   z-index: 1;
-  border-top: 1px solid #ede7f3;
+  border-top: 1px solid darken($secundary, 5%);
   background: $secundary;
   height: 3.5rem;
   a {
     color: white;
+    &:hover {
+      opacity: 0.6;
+    }
   }
   @include size($screen-tablet, min-width) {
     display: none;

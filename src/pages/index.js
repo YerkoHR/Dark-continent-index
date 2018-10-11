@@ -9,12 +9,10 @@ export default class IndexPage extends React.Component {
   constructor() {
     super();
     this.state = {
-      filter: "all",
-      toggle: false
+      filter: "all"
     };
     this.renderSwitch = this.renderSwitch.bind(this);
     this.onFilter = this.onFilter.bind(this);
-    this.onToggle = this.onToggle.bind(this);
   }
   renderSwitch(filter) {
     const data = this.props.data;
@@ -37,11 +35,6 @@ export default class IndexPage extends React.Component {
         return <CardList data={def} />;
     }
   }
-  onToggle() {
-    this.setState(prevState => ({
-      toggle: !prevState.toggle
-    }));
-  }
   onFilter(filter) {
     this.setState({ filter });
   }
@@ -49,11 +42,7 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <Filters
-          onFilter={this.onFilter}
-          state={this.state}
-          onToggle={this.onToggle}
-        />
+        <Filters onFilter={this.onFilter} state={this.state} />
         {this.renderSwitch(this.state.filter)}
       </Layout>
     );

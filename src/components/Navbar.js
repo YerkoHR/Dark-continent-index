@@ -1,14 +1,18 @@
 import React from "react";
 import { Link } from "gatsby";
+import hunterLogo from "../images/hunterLogo.png";
 
 const Navbar = () => (
   <nav>
     <div>
-      <div className="home-mobile">
-        <Link to="/">Dark Continent Index</Link>
-      </div>
+      <Link to="/" className="home-mobile">
+        <img className="hunter-logo" alt="hunter-logo" src={hunterLogo} />
+        <h2>Dark Continent Index</h2>
+      </Link>
       <div className="header">
-        <Link to="/">Home</Link>
+        <Link to="/">
+          <img className="hunter-logo" alt="hunter-logo" src={hunterLogo} />
+        </Link>
         <Link to="/about">About</Link>
         <Link to="/tags">Tags</Link>
         <div>

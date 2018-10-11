@@ -1,22 +1,3 @@
-@mixin color-code {
-  .Royal {
-    background: $brown;
-    color: #fff;
-  }
-  .Bodyguards {
-    color: #fff;
-    background: $blue;
-  }
-  .Dark {
-    color: #fff;
-    background: $green;
-  }
-  .Zodiacs {
-    color: #fff;
-    background: $red;
-  }
-}
-
 .content__container {
   margin: 2em;
   padding: 1em 0;

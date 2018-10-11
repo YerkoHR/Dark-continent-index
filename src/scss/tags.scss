@@ -44,5 +44,5 @@
 .to-all-tags {
   margin: 1em 0;
 
-  @include tag-bubble(darken($background, 20%));
+  @include tag-bubble(darken($primary, 20%));
 }

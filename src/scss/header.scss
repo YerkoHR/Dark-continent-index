@@ -1,10 +1,23 @@
+.hunter-logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 1.2em;
+}
+
 .home-mobile {
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2em;
-  a {
-    color: $secundary;
-    font-size: 1.3em;
+  flex-direction: row;
+  color: $secundary;
+  font-size: 1.3em;
+  @include size($screen-xs, max-width) {
+    flex-direction: column;
+    .hunter-logo {
+      margin: 0;
+    }
+    text-align: center;
   }
   @include size($screen-tablet, min-width) {
     display: none;
@@ -27,7 +40,6 @@
     transition: 0.4s;
     &:hover {
       opacity: 0.6;
-      border-bottom: 2px solid black;
     }
   }
 }

@@ -8,7 +8,7 @@
   }
   .gatsby-image-wrapper,
   img {
-    border: 0.5px solid $profile-font;
+    border: 0.5px solid $tertiary;
     width: 320px;
     max-height: 350px;
     margin: 0 auto;
@@ -21,10 +21,10 @@
   }
 }
 .sub-grid {
-  color: $profile-font;
+  color: $tertiary;
   margin: 0 1em;
   .character__name {
-    color: $profile-header;
+    color: $secundary;
     &::after {
       @include separator() {
         width: 95%;
@@ -40,7 +40,7 @@
   }
   .section-2 {
     a {
-      color: $profile-header;
+      color: $secundary;
       &:hover {
         text-decoration: underline;
       }
