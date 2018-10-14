@@ -126,14 +126,14 @@ export const pageQuery = graphql`
         profileImage {
           childImageSharp {
             fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }
         imgBeast {
           childImageSharp {
             fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }
