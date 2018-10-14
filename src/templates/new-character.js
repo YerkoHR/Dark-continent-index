@@ -34,14 +34,15 @@ export const BlogPostTemplate = ({
             <li>Faction: {faction}</li>
             <li>Nen type: {nen}</li>
             <li>DC debut: {debut}</li>
-            {abilities !== null && (
-              <ul>
-                Abilities:
-                {abilities.map(ability => (
-                  <li key={ability + `ability`}>-{ability}</li>
-                ))}
-              </ul>
-            )}
+            {abilities &&
+              abilities !== null && (
+                <ul>
+                  Abilities:
+                  {abilities.map(ability => (
+                    <li key={ability + `ability`}>-{ability}</li>
+                  ))}
+                </ul>
+              )}
           </ul>
           <PostContent className="section-2" content={content} />
 
