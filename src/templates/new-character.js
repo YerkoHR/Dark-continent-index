@@ -23,6 +23,7 @@ export const BlogPostTemplate = ({
   beastAbilities
 }) => {
   const PostContent = contentComponent || Content;
+
   return (
     <div>
       <Helmet title={`${title} | Character`} />
@@ -84,17 +85,17 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         faction={character.faction}
         tags={character.tags}
+        title={character.title}
+        debut={character.debut}
+        nen={character.nen}
+        imgFluid={character.profileImage.childImageSharp.fluid}
+        img={character.profileImage.childImageSharp.fluid.src}
+        imgBeast={
+          character.imgBeast ? character.imgBeast.childImageSharp.fluid : ""
+        }
         abilities={character.abilities ? character.abilities : ""}
         beastAbilities={
           character.beastAbilities ? character.beastAbilities : null
-        }
-        title={character.title}
-        debut={character.debut}
-        imgFluid={character.profileImage.childImageSharp.fluid}
-        img={character.profileImage.childImageSharp.fluid.src}
-        nen={character.nen}
-        imgBeast={
-          character.imgBeast ? character.imgBeast.childImageSharp.fluid : ""
         }
       />
     </Layout>
@@ -125,14 +126,14 @@ export const pageQuery = graphql`
         profileImage {
           childImageSharp {
             fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
         imgBeast {
           childImageSharp {
             fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
