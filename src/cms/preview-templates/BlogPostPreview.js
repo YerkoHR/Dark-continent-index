@@ -11,11 +11,6 @@ const BlogPostPreview = ({ entry, widgetFor }) => (
     debut={entry.getIn(["data", "debut"])}
     nen={entry.getIn(["data", "nen"])}
     img={entry.getIn(["data", "profileImage"])}
-    abilities={
-      entry.getIn(["data", "abilities"])
-        ? entry.getIn(["data", "abilities"])
-        : null
-    }
   />
 );
 
