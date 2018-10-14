@@ -62,9 +62,10 @@ export const BlogPostTemplate = ({
         </div>
         {imgFluid ? <Img fluid={imgFluid} /> : <img src={img} alt="" />}
       </div>
-      {tags.indexOf("prince") !== -1 && (
-        <NenBeast imgBeast={imgBeast} beastAbilities={beastAbilities} />
-      )}
+      {imgBeast &&
+        tags.indexOf("prince") !== -1 && (
+          <NenBeast imgBeast={imgBeast} beastAbilities={beastAbilities} />
+        )}
     </div>
   );
 };
