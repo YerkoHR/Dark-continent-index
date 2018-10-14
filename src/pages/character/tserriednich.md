@@ -7,6 +7,8 @@ profileImage: "/img/tserriednich-profile.png"
 faction: Royal Family
 nen: Specialization
 templateKey: new-character
+abilities:
+  - ""
 tags:
   - kakin
   - prince

@@ -7,6 +7,10 @@ profileImage: "/img/benjamin.png"
 imgBeast: "/img/benjamin-beast.png"
 nen: Unknown
 templateKey: new-character
+abilities:
+  - ""
+beastAbilities: 
+  - ""
 tags:
   - kakin
   - prince

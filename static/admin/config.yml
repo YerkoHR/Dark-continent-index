@@ -51,5 +51,8 @@ collections:
             ]
           }
       }
+      - { label: "Abilities", name: "abilities", widget: "list", field: 
+        { label: "Ability", name: "ability", widget: "text" }
+      }
       - { label: "Body", name: "body", widget: "markdown", default: "lorem ipsum..."}
 

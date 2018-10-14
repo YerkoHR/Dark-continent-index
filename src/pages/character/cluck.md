@@ -1,6 +1,6 @@
 ---
 title: Cluck
-debut: '318'
+debut: "318"
 faction: Zodiacs
 nen: Unknown
 image: /img/cluck.png
@@ -10,4 +10,5 @@ tags:
   - hunter
   - zodiac
 ---
+
 Botanical Hunter and a member of the Zodiacs with the codename "Chicken". She is also part of the Flora/Fauna Team, created in preparation for the voyage to the Dark Continent.

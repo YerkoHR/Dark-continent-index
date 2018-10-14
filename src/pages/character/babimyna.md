@@ -6,6 +6,7 @@ image: "/img/babimyna.png"
 profileImage: "/img/babimyna.png"
 debut: "363"
 nen: Unknown
+
 tags:
   - kakin
   - bodyguard

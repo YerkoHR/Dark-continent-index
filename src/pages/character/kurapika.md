@@ -1,6 +1,6 @@
 ---
 title: Kurapika
-debut: '343'
+debut: "343"
 faction: Bodyguards
 nen: Conjuration / Specialist
 image: /img/kurapika.png

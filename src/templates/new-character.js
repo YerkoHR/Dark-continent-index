@@ -18,7 +18,9 @@ export const BlogPostTemplate = ({
   nen,
   img,
   imgFluid,
-  imgBeast
+  imgBeast,
+  abilities,
+  beastAbilities
 }) => {
   const PostContent = contentComponent || Content;
   return (
@@ -32,6 +34,14 @@ export const BlogPostTemplate = ({
             <li>Faction: {faction}</li>
             <li>Nen type: {nen}</li>
             <li>DC debut: {debut}</li>
+            {abilities !== null && (
+              <ul>
+                Abilities:
+                {abilities.map(ability => (
+                  <li key={ability + `ability`}>-{ability}</li>
+                ))}
+              </ul>
+            )}
           </ul>
           <PostContent className="section-2" content={content} />
 
@@ -51,7 +61,9 @@ export const BlogPostTemplate = ({
         </div>
         {imgFluid ? <Img fluid={imgFluid} /> : <img src={img} alt="" />}
       </div>
-      {tags.indexOf("prince") !== -1 && <NenBeast imgBeast={imgBeast} />}
+      {tags.indexOf("prince") !== -1 && (
+        <NenBeast imgBeast={imgBeast} beastAbilities={beastAbilities} />
+      )}
     </div>
   );
 };
@@ -62,20 +74,26 @@ BlogPostTemplate.propTypes = {
 };
 
 const BlogPost = ({ data }) => {
-  const { frontmatter: post } = data.markdownRemark;
+  const { frontmatter: character } = data.markdownRemark;
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
+        content={data.markdownRemark.html}
         contentComponent={HTMLContent}
-        faction={post.faction}
-        tags={post.tags}
-        title={post.title}
-        debut={post.debut}
-        imgFluid={post.profileImage.childImageSharp.fluid}
-        img={post.profileImage.childImageSharp.fluid.src}
-        nen={post.nen}
-        imgBeast={post.imgBeast ? post.imgBeast.childImageSharp.fluid : ""}
+        faction={character.faction}
+        tags={character.tags}
+        abilities={character.abilities ? character.abilities : null}
+        beastAbilities={
+          character.beastAbilities ? character.beastAbilities : null
+        }
+        title={character.title}
+        debut={character.debut}
+        imgFluid={character.profileImage.childImageSharp.fluid}
+        img={character.profileImage.childImageSharp.fluid.src}
+        nen={character.nen}
+        imgBeast={
+          character.imgBeast ? character.imgBeast.childImageSharp.fluid : ""
+        }
       />
     </Layout>
   );
@@ -98,6 +116,10 @@ export const pageQuery = graphql`
         faction
         title
         nen
+        tags
+        abilities
+        debut
+        beastAbilities
         profileImage {
           childImageSharp {
             fluid(maxWidth: 300) {
@@ -112,8 +134,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        tags
-        debut
       }
     }
   }
