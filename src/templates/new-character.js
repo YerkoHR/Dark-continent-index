@@ -35,7 +35,7 @@ export const BlogPostTemplate = ({
             <li>Nen type: {nen}</li>
             <li>DC debut: {debut}</li>
             {abilities &&
-              abilities !== null && (
+              abilities !== "" && (
                 <ul>
                   Abilities:
                   {abilities.map(ability => (
@@ -84,7 +84,7 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         faction={character.faction}
         tags={character.tags}
-        abilities={character.abilities ? character.abilities : null}
+        abilities={character.abilities ? character.abilities : ""}
         beastAbilities={
           character.beastAbilities ? character.beastAbilities : null
         }
